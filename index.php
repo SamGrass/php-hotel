@@ -37,8 +37,9 @@
             'vote' => 2,
             'distance_to_center' => 50
         ],
-
     ];
+
+$hotel_keys = array_keys($hotels[0]);
 
 ?>
 
@@ -48,9 +49,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    
+<div class="container">
+    <h1>Hotel PHP</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <?php foreach ($hotel_keys as $hotel_key): ?>
+                    <th scope="col"><?php echo $hotel_key ?></th>
+                <?php endforeach; ?>
+            </tr>
+        </thead>
+        
+    </table>
+</div>
+
 </body>
 </html>
