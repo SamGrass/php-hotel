@@ -55,7 +55,6 @@ $hotel_keys = array_keys($hotels[0]);
 <body>
 <div class="container">
     <h1>Hotel PHP</h1>
-
     <table class="table">
         <thead>
             <tr>
@@ -64,7 +63,21 @@ $hotel_keys = array_keys($hotels[0]);
                 <?php endforeach; ?>
             </tr>
         </thead>
-        
+        <tbody>
+            <?php foreach($hotels as $key => $value): ?>
+                <tr>
+                    <td><?php echo $value['name'] ?></td>
+                    <td><?php echo $value['description'] ?></td>
+                    <td><?php if ($value['parking']) {
+                        echo 'Si';
+                    } else {
+                        echo 'No';
+                    }?></td>
+                    <td><?php echo $value['vote'] ?></td>
+                    <td><?php echo $value['distance_to_center'] ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
     </table>
 </div>
 
