@@ -55,6 +55,7 @@ $hotel_keys = array_keys($hotels[0]);
 <body>
 <div class="container">
     <h1>Hotel PHP</h1>
+    
     <table class="table">
         <thead>
             <tr>
